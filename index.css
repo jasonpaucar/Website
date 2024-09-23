@@ -1,0 +1,461 @@
+/* Define custom fonts */
+@font-face {
+  font-family: main;
+  src: url(/Fonts/futura-bold.otf);
+}
+
+@font-face {
+  font-family: sub-main;
+  src: url(/Fonts/futura-medium-bt.ttf);
+}
+
+/* Define root variables */
+:root {
+  --main: main;
+  --sub-main: sub-main;
+}
+
+.caption-heading {
+  position: relative;
+  color: red;
+  top: 15rem;
+  font-family: var(--main);
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+.caption-heading span {
+  color: white;
+}
+
+/* Global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  /* Change highlight background color to black */
+  background: #ff00004e;
+  /* Change highlight text color to red */
+}
+body {
+  height: 200rem;
+  background-color: white;
+}
+
+header {
+  display: flex;
+  right: 40px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0%;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.banner {
+  z-index: 2;
+  position: sticky;
+  top: 0;
+}
+
+.parallax {
+  z-index: 1;
+}
+
+.title,
+.title-mobile {
+  font-family: var(--main);
+  color: white;
+}
+
+/* Navigation links list */
+.nav__links {
+  display: flex;
+  list-style-type: none;
+  font-size: 15px;
+  font-weight: 1000;
+}
+
+.nav__links li {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Navigation link hover effect */
+.nav__links li a {
+  transition: color 0.3s ease;
+}
+
+.nav__links li a:hover {
+  color: rgb(186, 186, 186);
+}
+
+/* Call to action button styling */
+.cta {
+  font-family: var(--main);
+  text-decoration: none;
+  padding: 20px 50px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #870000;
+}
+
+/* Mobile navigation */
+.menu {
+  display: none;
+  cursor: pointer;
+}
+
+/* Overlay for mobile navigation */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  overflow-x: hidden;
+  transition: width 0.5s ease;
+}
+
+.overlay--active {
+  width: 100%;
+  z-index: 2;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #a90000;
+}
+
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: 60px;
+  color: #edf0f1;
+}
+
+/* Title for mobile */
+.title-mobile {
+  display: none;
+}
+
+/* Styles for desktops */
+.video-trailer {
+  position: absolute; /* Stay absolute for precise positioning */
+  width: 67rem;
+  height: 37.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 18.5rem; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  z-index: 1;
+  box-shadow: 0px 0px 20px black;
+}
+
+header {
+  background-color: transparent;
+}
+
+.button-div {
+  /* max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; */
+  height: 20vh;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 10px;
+  /* Adjust as needed */
+  padding-bottom: 10px;
+  /* Adjust as needed */
+  text-align: center;
+}
+
+.button-inside-div-2 {
+  cursor: pointer;
+  border: none;
+  width: 45vh;
+  height: 8vh;
+  background-color: white;
+  font-family: var(--sub-main);
+  font-size: 20px;
+  color: black;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.button-inside-div-1 {
+  cursor: pointer;
+  border: none;
+  width: 45vh;
+  margin-right: 15px;
+  height: 8vh;
+  background-color: gold;
+  font-family: var(--sub-main);
+  font-size: 20px;
+  color: black;
+  margin-top: 10px;
+  border-radius: 10px;
+  /* Initial box shadow */
+}
+
+.para-title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-family: var(--main);
+  color: white;
+  bottom: 12rem;
+}
+
+.para-title h1 {
+  font-size: 70px;
+  margin-bottom: 30px;
+}
+
+.para-title p {
+  font-family: var(--sub-main);
+  font-size: 30px;
+  margin: 0;
+}
+
+@media only screen and (max-width: 00px) {
+  .para-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-family: var(--main);
+    color: white;
+  }
+
+  .para-title h1 {
+    font-size: 1px;
+    margin-bottom: 30px;
+  }
+
+  .para-title p {
+    font-family: var(--sub-main);
+    font-size: 30px;
+    margin: 0;
+  }
+}
+
+/* styles for mobile */
+@media only screen and (max-width: 800px) {
+  .video-trailer-container {
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%;
+    /* 16:9 aspect ratio */
+  }
+
+  header {
+    background-color: black;
+  }
+
+  .button-div {
+    /* max-width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative; */
+    height: 20vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 10px;
+    /* Adjust as needed */
+    padding-bottom: 10px;
+    /* Adjust as needed */
+    text-align: center;
+  }
+
+  .button-inside-div-1 {
+    cursor: pointer;
+    width: 45vh;
+    height: 8vh;
+    background-color: gold;
+    font-family: var(--sub-main);
+    font-size: 20px;
+    color: black;
+    margin-top: 10px;
+    border-radius: 10px;
+
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .button-inside-div-2 {
+    cursor: pointer;
+    border: none;
+    width: 45vh;
+    height: 8vh;
+    background-color: rgb(255, 255, 255);
+    font-family: var(--sub-main);
+    font-size: 20px;
+    color: black;
+    margin-top: 10px;
+    border-radius: 10px;
+
+    width: 100%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .para-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-family: var(--main);
+    color: white;
+  }
+
+  .para-title h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+
+  .para-title p {
+    font-family: var(--sub-main);
+    font-size: 30px;
+    margin: 0;
+  }
+
+  .video-trailer-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .nav__links,
+  .cta {
+    display: none;
+  }
+
+  header {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    background-color: black;
+    top: 0;
+  }
+
+  .menu {
+    position: absolute;
+    right: 10px;
+    display: block;
+    padding: 0 15px;
+    font-size: 4ch;
+    background-color: initial;
+    color: white;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .title-mobile {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* Banner text styling */
+#banner-text {
+  box-shadow: 0px 0px 15px black;
+  background-color: red;
+  color: white;
+  font-family: var(--sub-main);
+  text-align: center;
+  font-size:23px;
+  padding: 10px;
+  width: 100%;
+  position: sticky;
+  text-decoration: underline;
+  transition: background-color 0.3s ease;
+  top: 0;
+}
+
+#banner-text:hover {
+  text-decoration: underline;
+  background-color: #870000;
+  cursor: pointer;
+}
+
+/* Parallax styling */
+.parallax {
+  position: relative;
+  height: 46rem;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.parallax video {
+  filter: brightness(60%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -5;
+}
+
+.content-container {
+  margin-bottom: 20vh;
+}
