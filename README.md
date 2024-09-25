@@ -1,2 +1,2 @@
-My small editing business website. 
+editing portfolio website. 
 finercontent.com
