@@ -14,11 +14,14 @@
   --main: main;
   --sub-main: sub-main;
 }
+.highlighted-text{
+  color: red;
+}
 
 .caption-heading {
   position: relative;
   color: red;
-  top: 15rem;
+  top: 10rem;
   font-family: var(--main);
   font-size: 3rem;
   text-align: center;
@@ -173,12 +176,12 @@ header {
 /* Styles for desktops */
 .video-trailer {
   position: absolute; /* Stay absolute for precise positioning */
-  width: 67rem;
-  height: 37.5rem;
+  width: 63rem;
+  height: 35rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 18.5rem; /* Adjust as needed */
+  top: 15rem; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
   border-radius: 20px;
@@ -244,12 +247,13 @@ header {
   width: 100%;
   font-family: var(--main);
   color: white;
-  bottom: 12rem;
+  bottom: 14rem;
+  text-align: center;
 }
 
 .para-title h1 {
-  font-size: 70px;
-  margin-bottom: 30px;
+  font-size: 2.5rem;
+  margin-top:0rem;
 }
 
 .para-title p {
@@ -258,7 +262,7 @@ header {
   margin: 0;
 }
 
-@media only screen and (max-width: 00px) {
+@media only screen and (max-width: 500px) {
   .para-title {
     display: flex;
     flex-direction: column;
@@ -283,7 +287,46 @@ header {
 }
 
 /* styles for mobile */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
+
+  .para-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-family: var(--main);
+    color: white;
+    bottom: 12rem;
+  }
+  
+  .para-title h1 {
+    font-size: 10000px;
+    margin-bottom: 30px;
+    font-size: 1rem; text-align: center;
+  }
+
+  .para-title h1{
+    font-size: 2rem;
+  }
+
+  #banner-text {
+    display: none;
+    box-shadow: 0px 0px 15px black;
+    background-color: transparent;
+    color: white;
+    font-family: var(--sub-main);
+    text-align: center;
+    font-size:23px;
+    padding: 6px;
+    width: 100%;
+    position: sticky;
+    text-decoration: underline;
+    transition: background-color 0.3s ease;
+    top: 0;
+  }
   .video-trailer-container {
     margin-top: 100px;
     position: relative;
@@ -293,9 +336,7 @@ header {
     /* 16:9 aspect ratio */
   }
 
-  header {
-    background-color: black;
-  }
+
 
   .button-div {
     /* max-width: fit-content;
@@ -349,21 +390,8 @@ header {
     cursor: pointer;
   }
 
-  .para-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    font-family: var(--main);
-    color: white;
-  }
+ 
 
-  .para-title h1 {
-    font-size: 50px;
-    margin-bottom: 30px;
-  }
 
   .para-title p {
     font-family: var(--sub-main);
@@ -421,7 +449,7 @@ header {
   color: white;
   font-family: var(--sub-main);
   text-align: center;
-  font-size:23px;
+  font-size:17px;
   padding: 10px;
   width: 100%;
   position: sticky;
