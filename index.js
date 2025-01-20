@@ -3,6 +3,8 @@ const menuOpen = doc.querySelector(".menu");
 const menuClose = doc.querySelector(".close");
 const overlay = doc.querySelector(".overlay");
 
+alert("Website is in development phase")
+
 menuOpen.addEventListener("click", () => {
   overlay.classList.add("overlay--active");
 });
@@ -14,5 +16,4 @@ menuClose.addEventListener("click", () => {
 function handleScroll() {
   document.getElementById('content-container').scrollIntoView({ behavior: 'smooth' });
 }
-
 

@@ -63,6 +63,8 @@ header {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 0;
+  background-color: transparent;
+
 }
 
 .banner {
@@ -208,9 +210,6 @@ header {
   box-shadow: 0px 0px 20px black;
 }
 
-header {
-  background-color: transparent;
-}
 
 .button-div {
   /* max-width: fit-content;
@@ -519,7 +518,7 @@ header {
 
 
 .parallax video {
-  filter: brightness(60%);
+  filter: brightness(20%);
   position: absolute;
   top: 50%;
   left: 50%;

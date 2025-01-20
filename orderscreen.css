@@ -1,0 +1,115 @@
+/* Define custom fonts */
+@font-face {
+  font-family: main;
+  src: url(/Fonts/futura-bold.otf);
+}
+
+@font-face {
+  font-family: sub-main;
+  src: url(/Fonts/futura-medium-bt.ttf);
+}
+
+/* Define root variables */
+:root {
+  --main: main;
+  --sub-main: sub-main;
+}
+
+body {
+  background-color: white;
+}
+#Subheading {
+  color: white;
+  text-align: center;
+  font-family: var(--main);
+  font-size: 3rem;
+}
+/* button css */
+.btn_option{
+  background-color: white;
+  color: black;
+  border: solid;
+  /* width: 20rem; */
+  /* height: 10rem; */
+  font-family: var(--sub-main);
+  /* font-size: 3rem; */
+  cursor: pointer;
+}
+.detail_container{
+  border: solid;
+  width: 20rem;
+  height: 10rem;
+}
+
+.btn_option:hover {
+  background-color: red;
+}
+
+#btn_sample {
+  border: none;
+  width: 20rem;
+  height: 10rem;
+  font-family: var(--sub-main);
+  font-size: 2rem;
+}
+.orderOptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header css */
+
+header {
+  font-size: 13px;
+  padding: 10px;
+  position: sticky;
+  background-color: black;
+  top: 0;
+}
+
+header {
+  display: flex;
+  right: 40px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0%;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  background-color: transparent;
+}
+/* navbar css */
+.nav__links {
+  display: flex;
+  list-style-type: none;
+  font-size: 15px;
+  font-weight: 1000;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.132);
+  background-color: black;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.nav__links li a {
+  padding: 10px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-family: var(--sub-main);
+}
+
+/* Navigation link hover effect */
+.nav__links li a {
+  transition: color 0.3s ease;
+}
+
+.nav__links li a:hover {
+  color: rgb(186, 186, 186);
+}
+.title {
+  font-family: var(--main);
+  font-size: 2rem;
+}
