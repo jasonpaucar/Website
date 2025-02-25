@@ -1,4 +1,4 @@
-/* Define custom fonts */
+
 @font-face {
   font-family: main;
   src: url(/Fonts/futura-bold.otf);
@@ -113,3 +113,6 @@ header {
   font-family: var(--main);
   font-size: 2rem;
 }
+
+LINK FOR GOOGLE FORMS
+https://docs.google.com/forms/d/1TqbDHC-tHS05yXwW0ZqOi6DJeL3m0QlPdHR_ZMD2dAY/edit?usp=forms_home&ths=true
