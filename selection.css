@@ -21,6 +21,7 @@
   height: fit-content;
   margin: auto;
   text-align: center;
+  
 }
 
 .btnSelection {
@@ -34,6 +35,8 @@
   cursor: pointer;
   background: black;
   color: white;
+
+
 }
 
 .btnSelection2 {
@@ -47,6 +50,8 @@
   cursor: pointer;
   background-color: black;
   color: white;
+
+  
 }
 
 #title {

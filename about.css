@@ -1,24 +1,243 @@
-body {
-  background-color: white;
-  color: black;
-  font-family: Arial, sans-serif;
+/* Navbar CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Define custom fonts */
+@font-face {
+  font-family: main;
+  src: url(/Fonts/futura-bold.otf);
 }
 
-button {
-  background-color: black; /* Green */
-  border: none;
+@font-face {
+  font-family: sub-main;
+  src: url(/Fonts/futura-medium-bt.ttf);
+}
+body {
+background-color: #101015;
+}
+/* Define root variables */
+:root {
+  --main: main;
+  --sub-main: sub-main;
+}
+
+header {
+  display: flex;
+  right: 20px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0%;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  background-color: transparent;
+}
+
+.title,
+.title-mobile {
+  z-index: 4000;
+  font-family: var(--main);
   color: white;
-  padding: 15px 32px;
+}
+
+/* Navigation links list */
+.nav__links {
+  display: flex;
+  list-style-type: none;
+  font-size: 13px;
+  font-weight: 1000;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.132);
+  background-color: black;
+  padding: 13px;
+  border-radius: 20px;
+}
+
+.nav__links li {
+  margin: 0 3px;
+}
+
+.nav__links li a {
+  padding: 6px;
   text-align: center;
+  color: white;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-family: var(--sub-main);
+}
+
+/* Navigation link hover effect */
+.nav__links li a {
+  transition: color 0.3s ease;
+}
+
+.nav__links li a:hover {
+  color: rgb(186, 186, 186);
+}
+
+/* Call to action button styling */
+.cta {
+  font-family: var(--main);
+  text-decoration: none;
+  padding: 20px 50px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
-  border-radius: 4px;
   transition: background-color 0.3s ease;
 }
 
-button:hover {
-  box-shadow: 0px 0px 15px black;
+.cta:hover {
+  background-color: #870000;
+}
+
+/* Mobile navigation */
+.menu {
+  display: none;
+  cursor: pointer;
+}
+
+/* Overlay for mobile navigation */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  overflow-x: hidden;
+  transition: width 0.5s ease;
+}
+
+.overlay--active {
+  width: 100%;
+  z-index: 2;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #a90000;
+}
+
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: 60px;
+  color: #edf0f1;
+}
+
+/* Title for mobile */
+.title-mobile {
+  display: none;
+}
+
+/* Styles for desktops */
+@media only screen and (max-width: 1000px) {
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0%;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+  }
+
+  .nav__links,
+  .cta {
+    display: none;
+  }
+
+  .menu {
+    position: absolute;
+    right: 10px;
+    display: block;
+    padding: 0 15px;
+    font-size: 4ch;
+    background-color: initial;
+    color: white;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .title-mobile {
+    z-index: 2;
+    display: block;
+    text-align: left;
+    justify-content: left;
+  }
+}
+
+.h1caption {
+  font-family: "Inter", sans-serif; /* Use the Google Font */
+  font-weight: 100;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.h1caption2 {
+  font-family: "Inter", sans-serif; /* Use the Google Font */
+  font-weight: 100;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b0b0bb;
+}
+.aboutMeContainer {
+  position: relative;
+  border-radius: 25px;
+  height: 400px;
+  width: 1000px;
+  padding: 30px 30px 30px 30px;
+  top: 150px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #1d1d25;
+}
+p{
+  color: #b0b0bb;
+  font-family: "Inter", sans-serif; /* Use the Google Font */
+  margin-top: 40px;
+  padding-left: 120px;
+  padding-right: 120px;
+
+}
+
+.image{
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-style:dashed;
+  border-color: #333;
+}
+button{
+  border-style: none;
+  height: 50px;
+  width: 150px;
+  font-family: var(--sub-main);
+  border-radius: 5px;
+  margin-top: 50px;
+  
 }

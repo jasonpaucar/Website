@@ -51,6 +51,7 @@
 body {
   height: 200rem;
   background-color: white;
+  
 }
 
 header {
@@ -518,7 +519,7 @@ header {
 
 
 .parallax video {
-  filter: brightness(20%);
+  filter: brightness(70%);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -531,4 +532,5 @@ header {
 
 .content-container {
   margin-bottom: 20vh;
+  
 }
