@@ -1,12 +1,13 @@
+
 /* Define custom fonts */
 @font-face {
   font-family: main;
-  src: url(/Fonts/futura-bold.otf);
+  src: url(/Fonts/montserrat.bold.ttf);
 }
 
 @font-face {
   font-family: sub-main;
-  src: url(/Fonts/futura-medium-bt.ttf);
+  src: url(/Fonts/montserrat.bold.ttf);
 }
 
 /* Define root variables */
@@ -17,6 +18,10 @@
 .highlighted-text {
   color: red;
 }
+.title{
+  font-family: var(--main);
+}
+
 
 .caption-heading {
   position: relative;
@@ -31,7 +36,7 @@
   
 }
 
-.
+
 .caption-heading span {
   color: white;
 }
@@ -81,8 +86,9 @@ header {
 .title,
 .title-mobile {
   z-index: 4000;
-  font-family: var(--main);
   color: white;
+  font-family: var(--main);
+  font-weight: 900;
 }
 
 /* Navigation links list */

@@ -1,11 +1,11 @@
 @font-face {
   font-family: main;
-  src: url(/Fonts/futura-bold.otf);
+  src: url(/Fonts/montserrat.bold.ttf);
 }
 
 @font-face {
   font-family: sub-main;
-  src: url(/Fonts/futura-medium-bt.ttf);
+  src: url(/Fonts/montserrat.bold.ttf);
 }
 
 /* Define root variables */

@@ -7,15 +7,15 @@
 /* Define custom fonts */
 @font-face {
   font-family: main;
-  src: url(/Fonts/futura-bold.otf);
+  src: url(/Fonts/montserrat.bold.ttf);
 }
 
 @font-face {
   font-family: sub-main;
-  src: url(/Fonts/futura-medium-bt.ttf);
+  src: url(/Fonts/montserrat.bold.ttf);
 }
 body {
-background-color: #101015;
+  background-color: #101015;
 }
 /* Define root variables */
 :root {
@@ -144,7 +144,72 @@ header {
 }
 
 /* Styles for desktops */
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 900px) {
+  /* 👇 Body Of website*/
+  .h1caption {
+    font-family: "Inter", sans-serif; /* Use the Google Font */
+    font-weight: 400;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .h1caption2 {
+    font-family: "Inter", sans-serif; /* Use the Google Font */
+    font-weight: 400;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b0b0bb;
+  }
+  .aboutMeContainer {
+    position: relative;
+    border-radius: 25px;
+    height: fit-content;
+    width: 100%;
+    margin-left: 1000px;
+    padding: 30px 30px 30px 30px;
+    top: 150px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1d1d25;
+  }
+  p {
+    color: #b0b0bb;
+    font-family: "Inter", sans-serif; /* Use the Google Font */
+    font-weight: 500;
+    margin-top: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .image {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-style: dashed;
+    border-color: #333;
+  }
+  button {
+    border-style: none;
+    height: 70px;
+    width: 200px;
+    font-family: var(--sub-main);
+    font-size: 15px;
+    border-radius: 20px;
+    margin-top: 50px;
+    cursor: pointer;
+    border: 3px solid black;
+  }
+}
+
+@media only screen and (max-width: 900px) {
   header {
     display: flex;
     justify-content: space-around;
@@ -181,63 +246,57 @@ header {
     text-align: left;
     justify-content: left;
   }
-}
 
-.h1caption {
-  font-family: "Inter", sans-serif; /* Use the Google Font */
-  font-weight: 100;
-  font-size: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .h1caption {
+    font-family: "Inter", sans-serif; /* Use the Google Font */
+    font-weight: 400;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .h1caption2 {
+    font-family: "Inter", sans-serif; /* Use the Google Font */
+    font-weight: 400;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #b0b0bb;
+  }
+  .aboutMeContainer {
+    position: relative;
+    border-radius: 25px;
+    height: 100%;
+    width: 100%;
+    padding: 30px 30px 30px 30px;
+    top: 150px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1d1d25;
+  }
+  p {
+    color: #b0b0bb;
+    font-family: "Inter", sans-serif; /* Use the Google Font */
+    font-weight: 500;
+    margin-top: 40px;
+  }
+  button {
+    border-style: none;
+    height: 100px;
+    width: 80%;
+    margin-top: 10px;
+    font-family: var(--sub-main);
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: #000 solid 3px;
+  }
+}
+button:hover {
+  background-color: rgb(0, 0, 0);
   color: white;
-}
-.h1caption2 {
-  font-family: "Inter", sans-serif; /* Use the Google Font */
-  font-weight: 100;
-  font-size: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #b0b0bb;
-}
-.aboutMeContainer {
-  position: relative;
-  border-radius: 25px;
-  height: 400px;
-  width: 1000px;
-  padding: 30px 30px 30px 30px;
-  top: 150px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #1d1d25;
-}
-p{
-  color: #b0b0bb;
-  font-family: "Inter", sans-serif; /* Use the Google Font */
-  margin-top: 40px;
-  padding-left: 120px;
-  padding-right: 120px;
-
-}
-
-.image{
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  border-style:dashed;
-  border-color: #333;
-}
-button{
-  border-style: none;
-  height: 50px;
-  width: 150px;
-  font-family: var(--sub-main);
-  border-radius: 5px;
-  margin-top: 50px;
-  
 }
